@@ -38,8 +38,8 @@ if st.button("Predict Delay"):
     y_proba = model.predict_proba(test_flight)[:, 1][0]
 
     if y_pred == 1:
-        st.error("✈️ Yes, the flight will likely be delayed 15+ minutes.")
+        st.error("✈️ The flight will likely be delayed 15+ minutes.")
     else:
-        st.success("🟢 No, the flight is unlikely to be delayed 15+ minutes.")
+        st.success("🟢 The flight is expected to depart on time or with a delay under 15 minutes.")
 
     st.write(f"Probability of delay: {y_proba * 100:.0f}%")
