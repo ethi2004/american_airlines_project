@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from catboost import CatBoostClassifier
 
-# Load your saved model
+# Load saved model
 model = CatBoostClassifier()
 model.load_model("flight_delay_model.cbm")
 
